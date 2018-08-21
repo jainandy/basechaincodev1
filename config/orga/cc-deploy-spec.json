@@ -1,0 +1,10 @@
+{
+			"description":"Install/Upgrade Chain Code",
+			"ccID":"sd1",
+			"version":"2.0",
+			"channel":"defaultchannel",
+			"goPath":"/home/ibmdev/go",
+			"ccSrcRootPath":"github.com/suddutt1/chaincode",
+			"initParams":["",""],
+			"ccPolicy":"And('org1.member')"
+}
