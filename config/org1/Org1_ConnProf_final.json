@@ -18,9 +18,9 @@
     },
     "x-organizationName": "Company A",
     "credentialStore": {
-      "path": "./tmp/state-store",
+      "path": "./config/org1/tmp/state-store",
       "cryptoStore": {
-        "path": "./tmp/msp"
+        "path": "./config/org1/tmp/msp"
       }
     },
     "BCCSP": {
@@ -74,15 +74,17 @@
         "x-name": "default"
       },
       "x-uploadedSignedCerts": [],
-      "cryptoPath": "./tmp/msp/users/{username}",
       "users": {
-        "cert": {
+        "remote_admin": {
+          "cert": {
           "pem": "-----BEGIN CERTIFICATE-----\nMIICszCCAlmgAwIBAgIUCiNX2aedJjvF3VWnWrjVzh/CFGYwCgYIKoZIzj0EAwIw\nbzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSAwHgYDVQQDExdmYWJyaWMt\nY2Etc2VydmVyLW9yZzFDQTAeFw0xODA4MjkxODAzMDBaFw0xOTA4MjkxODA4MDBa\nMDMxGjALBgNVBAsTBHVzZXIwCwYDVQQLEwRvcmcxMRUwEwYDVQQDDAxyZW1vdGVf\nYWRtaW4wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARzPo+LvYEFDxo2EPsz2rTh\nEt0LIXoEKyW4zDJto4xOzDPgX/9yyL6TAd01tM6E39ycfB0rpyVW+ToIidDW8H9W\no4IBDTCCAQkwDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYE\nFOz6++0w2FOkzzxfV0VuZk9esRgWMB8GA1UdIwQYMBaAFAm4q0ynCs5hFeVcgIuq\n0cIJjEdYMB0GA1UdEQQWMBSCEmphaWRlZXAtVmlydHVhbEJveDCBiQYIKgMEBQYH\nCAEEfXsiYXR0cnMiOnsiaGYuQWZmaWxpYXRpb24iOiJvcmcxIiwiaGYuRW5yb2xs\nbWVudElEIjoicmVtb3RlX2FkbWluIiwiaGYuVHlwZSI6InVzZXIiLCJyb2xlMSI6\nIjEyMzplY2VydCIsInJvbGUyIjoiMTIzOmVjZXJ0In19MAoGCCqGSM49BAMCA0gA\nMEUCIQCkKj2g5xk2IjWr2vEb9N3mlENjaLWIu4HIPPe4t6wQ9wIgEl18/6xUS1//\nWHTxzY+22l23WopoDYbD4DUE9oEcLgk=\n-----END CERTIFICATE-----\n"
         },
-        "key": {
+          "key": {
           "pem": "-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg07BPCiueMkDid02j\niUb3wudXgMQdCpa1/IICG4zkmaOhRANCAARzPo+LvYEFDxo2EPsz2rThEt0LIXoE\nKyW4zDJto4xOzDPgX/9yyL6TAd01tM6E39ycfB0rpyVW+ToIidDW8H9W\n-----END PRIVATE KEY-----\n"
         }
-      }
+       }
+    },
+    "cryptoPath": "./config/org1/tmp/msp/users/{username}"
     }
   },
   "orderers": {
@@ -164,5 +166,5 @@
     }
   },
   "x-type": "hlfv1",
-  "x-remote-admin": "remote_admin"
+  "x-remote_admin": "remote_admin"
 }

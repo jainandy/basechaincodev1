@@ -1,0 +1,10 @@
+{
+			"description":"Install/Upgrade Chain Code",
+			"ccID":"sd1",
+			"version":"1.0",
+			"channel":"defaultchannel",
+			"goPath":"_GOPATH_",
+			"ccSrcRootPath":"basic",
+			"initParams":["",""],
+			"ccPolicy":"And('org2.member')"
+}
