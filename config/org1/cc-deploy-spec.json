@@ -3,7 +3,7 @@
 			"ccID":"sd1",
 			"version":"1.0",
 			"channel":"defaultchannel",
-			"goPath":"/home/jaideep/Blockchain/TEF-1CDR/ibpCCDeploy/basechaincodev1",
+			"goPath":"$(pwd)",
 			"ccSrcRootPath":"basic",
 			"initParams":["",""],
 			"ccPolicy":"And('org1.member')"
