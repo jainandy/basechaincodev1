@@ -1,0 +1,10 @@
+{
+			"descrption":"Admin cert install specification",
+			"peerID":"org1-peer1",
+			"certFilePath":"./tmp/state-store/remote_admin@org1-cert.pem",
+			"keyFilePath":"./tmp/msp/keystore/c106866b978453ebbffe178315d40a8d848c8f09f1e65a9cadf8f9dd0ce103f5_sk",
+			"adminCertName":"remote_admin",
+			"orgMSP":"org1",
+			"channel":"defaultchannel"
+
+}
