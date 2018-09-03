@@ -25,13 +25,10 @@ INST_RESP=$(curl -X POST \
   -H  "authorization: Basic $AUTH" \
     -d "{  \"peer_names\": [    \"org1-peer1\"  ],  \"SKIP_CACHE\": true}" \
   --connect-timeout 60 || true)
-
-
-  echo ******
-  echo "Chaincode Instantiated Response"
-  echo $INST_RESP
-
-  echo *******
+echo ******
+echo "Chaincode Instantiated Response"
+echo $INST_RESP
+echo *******
 
 echo "Install chaincode"
 echo "URL: $API_HOST/api/v1/networks/$NETWORK_ID/chaincode/install"
@@ -47,7 +44,6 @@ echo "New chaincode_version: $new_cc_version"
 echo "Chaincode ID: $ccid"
 echo "Chaincode Path : $ccPath"
 echo "GoRoot: $goRoot"
-
 echo "Moving to chaincode folder"
 cd $ccPath
 echo $(pwd)
@@ -56,12 +52,13 @@ zip $goRoot.zip $goRoot
 
 echo " Install URL:$API_HOST/api/v1/networks/$NETWORK_ID/chaincode/install "
 
-#INSTALL_RESP=$(curl -X POST "$API_HOST/api/v1/networks/$NETWORK_ID/chaincode/install" \
-#-H  "accept: application/json" \
-#-H  "authorization: Basic $AUTH" \
-#-H  "Content-Type: multipart/form-data" \
-#-F "files=$goRoot.zip;type=application/x-zip-compressed" -F "chaincode_id=$ccid" -F "chaincode_version=$new_cc_version" \
-#-F "chaincode_type=golang")
+INSTALL_RESP=$(curl -X POST \
+"$API_HOST/api/v1/networks/$NETWORK_ID/chaincode/install" \
+-H  "accept: application/json" \
+-H  "authorization: Basic $AUTH" \
+-H  "Content-Type: multipart/form-data" \
+-F "files=$goRoot.zip;type=application/x-zip-compressed" -F "chaincode_id=$ccid" -F "chaincode_version=$new_cc_version" \
+-F "chaincode_type=golang")
 
 
 echo ******
